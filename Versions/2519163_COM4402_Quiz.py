@@ -18,7 +18,7 @@ while i < 5:
         print("Correct!")
         score = score + 1
     else:
-        print("Incorrect!")
+        print(f"Incorrect! the correct answer is {correct_answers[i]}")
     i = i + 1
 
 print(f"{name} your score is: {score}! Well done!")
