@@ -40,4 +40,4 @@ while i < 5:
         sleep(2)
     i = i + 1
 
-print(f"\n\n{name} your score is: {score}! Well done!")
+print(f"\n\n{name} your score is: {score}/5! Well done!")
