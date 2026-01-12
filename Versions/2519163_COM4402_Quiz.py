@@ -1,4 +1,13 @@
 from time import sleep
+
+
+"""
+functions- is_int(), in_range(), menu(), is_correct(), quiz(), data(), score()
+
+start with menu, quiz, data, is_int, in_range, score
+
+
+"""
 print("\n\n#####################\n")
 print("Welcome to the Quiz!!")
 name = input("\nWhat is your name? ")
@@ -32,12 +41,10 @@ while i < 5:
             else:
                 sleep(0.5)
                 print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
-                #print("not in range")
                 sleep(2)
     except:
         print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
-        #print(" EXCEPT not defined as int")
         sleep(2)
     i = i + 1
 
-print(f"\n\n{name} your score is: {score}/5! Well done!")
+print(f"\n\n{name} your final score is: {score}/5! Well done!")
