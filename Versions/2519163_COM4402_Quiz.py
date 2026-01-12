@@ -36,7 +36,7 @@ while i < 5:
                 sleep(2)
     except:
         print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
-        print(" EXCEPT not defined as int")
+        #print(" EXCEPT not defined as int")
         sleep(2)
     i = i + 1
 
