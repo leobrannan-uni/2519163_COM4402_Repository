@@ -1,4 +1,4 @@
-from time import sleep
+#from time import sleep
 
 
 """
@@ -26,27 +26,30 @@ def quiz(questions, answers, correct_answers, name):
         print(f"Question {i + 1}. \n{questions[i]}\n")
         print(answers[i])
         choice = input("\nAnswer: ")
-        is_int(choice)
-        in_range(choice)
-        is_correct(choice, correct_answers, score, i)
+        check_answer(choice, correct_answers, i, score)
+        i = i + 1
 
-    print(f"\n\n{name} your final score is: {score}/5! Well done!")
+    print (f"\n\n{name} your final score is: {score}/5! Well done!")
 
+def check_answer(choice, correct_answers, i, score):
+        while True:
+            choice = is_int(choice, correct_answers, i)
+            in_range(choice, correct_answers, i)
+            score = is_correct(choice, correct_answers, score, i)
+            break
 
-def is_int(choice):
+def is_int(choice, correct_answers, i):
     try:
-        choice = int(choice)
-        if choice == int(choice):
-            return True
-        else:
-            return False
-    finally:
+        return int(choice)
+    except ValueError:
+        print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         return False
 
-def in_range(choice):
+def in_range(choice, correct_answers, i):
     if 0 < choice < 4:
         return True
     else:
+        print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         return False
 
 def is_correct(choice, correct_answers, score, i):
@@ -55,13 +58,13 @@ def is_correct(choice, correct_answers, score, i):
         print("\nCorrect!")
         score = score + 1
         #sleep(2)
-
+        return True
     else:
         #sleep(0.5)
         print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         # print
         #sleep(2)
-    return
+        return False
 
 
 def data(name):
