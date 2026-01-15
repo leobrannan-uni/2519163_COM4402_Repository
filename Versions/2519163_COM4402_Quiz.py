@@ -32,10 +32,10 @@ def int_range(choice, correct_answers, i):
             return int(choice)
         else:
             print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
-            return None
+            return choice
     except ValueError:
         print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
-        return None
+        return choice
 
 
 def is_correct(choice, correct_answers, score, i):
@@ -46,6 +46,7 @@ def is_correct(choice, correct_answers, score, i):
         #sleep(2)
         return score
     else:
+        print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         return score
 
 
