@@ -15,8 +15,8 @@ def menu():
     print("Welcome to the Quiz!!")
     name = input("\nWhat is your name? ")
     print(f"\nHello, {name}. The quiz will contain 5 multiple choice questions where your answer must be either A, B, or C. Lets Begin!")
-    sleep(3)
-    data()
+    #sleep(3)
+    data(name)
 
 def quiz(questions, answers, correct_answers, name):
     score = 0
@@ -26,14 +26,14 @@ def quiz(questions, answers, correct_answers, name):
         print(f"Question {i + 1}. \n{questions[i]}\n")
         print(answers[i])
         choice = input("\nAnswer: ")
-        is_int(choice, correct_answers)
+        is_int(choice)
         in_range(choice)
         is_correct(choice, correct_answers, score, i)
 
     print(f"\n\n{name} your final score is: {score}/5! Well done!")
 
 
-def is_int(choice, correct_answers):
+def is_int(choice):
     try:
         choice = int(choice)
         if choice == int(choice):
@@ -51,16 +51,16 @@ def in_range(choice):
 
 def is_correct(choice, correct_answers, score, i):
     if choice == correct_answers[i]:
-        sleep(0.5)
+        #sleep(0.5)
         print("\nCorrect!")
         score = score + 1
-        sleep(2)
+        #sleep(2)
 
     else:
-        sleep(0.5)
+        #sleep(0.5)
         print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         # print
-        sleep(2)
+        #sleep(2)
     return
 
 
