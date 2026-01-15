@@ -31,10 +31,8 @@ def int_range(choice, correct_answers, i):
         if 0 < choice < 4:
             return int(choice)
         else:
-            print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
             return choice
     except ValueError:
-        print(f"\nIncorrect! the correct answer is {correct_answers[i]}")
         return choice
 
 
