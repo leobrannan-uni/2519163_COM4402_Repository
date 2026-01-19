@@ -9,5 +9,5 @@ Instructions to run code:
 
 Please run the file 2519163_COM4402_Quiz.py, which involves all the code for my assessment.
 
-Please ensure you are running the latest version, and use your preferred interpreter for running the code. 
+Please ensure both the file and the csv file 'data.csv' are in the same folder, you are running the latest version, and use your preferred interpreter for running the code. 
 
