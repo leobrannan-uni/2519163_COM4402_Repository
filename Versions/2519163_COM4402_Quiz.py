@@ -16,7 +16,7 @@ def quiz(questions, answers, correct_answers, name):
     while i < 5:
         print("\n\n#####################\n")
         print(f"Question {i + 1}. \n{questions[i]}\n")
-        sleep(1.5)
+        sleep(1)
         print(answers[i])
         choice = input("\nAnswer: ")
         sleep(0.5)
@@ -56,7 +56,7 @@ def data(name):
                  "Life-changing Power of Balancing Your Blood' what?",
                  "Meerkat Movies is a promotion by what comparison website?")
     answers = ("1. Thomas Tuchel. 2. Thomas Frank. 3. Thomas Muller.",
-               "1. Mint. 2. Gravy. 3. Cranberry.1. Car. 2. Sleigh. 3. Bicycle.",
+               "1. Mint. 2. Gravy. 3. Cranberry.", "1. Car. 2. Sleigh. 3. Bicycle.",
                "1. Pressure. 2. Alcohol Content. 3. Sugar.",
                "1. Compare the Market. 2. Confused. 3. Money Supermarket.")
     correct_answers = (1, 3, 2, 3, 1)
