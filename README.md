@@ -7,7 +7,12 @@ Module Code: COM4402
 
 Instructions to run code:
 
-Please run the file 2519163_COM4402_Quiz.py, which involves all the code for my assessment.
+Please ensure the files '2519163_COM4402_Quiz.py' and 'data.csv' are in the same folder before running any programs. 
 
-Please ensure both the file and the csv file 'data.csv' are in the same folder, you are running the latest version, and use your preferred interpreter for running the code. 
+The file 'function_test.py' should be ignored.
 
+If you do not have the pandas library installed, before running go on to your preferred console and install it. 
+
+This can be done using the command pip install pandas, or -m pip install pandas. 
+
+That is all the setup that is required, to begin the quiz run '2519163_COM4402_Quiz.py'.
