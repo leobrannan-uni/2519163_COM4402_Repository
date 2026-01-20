@@ -13,6 +13,6 @@ The file 'function_test.py' should be ignored.
 
 If you do not have the pandas library installed, before running go on to your preferred console and install it. 
 
-This can be done using the command pip install pandas, or -m pip install pandas. 
+This can be done using the command 'pip install pandas', or 'py -m pip install pandas'. 
 
 That is all the setup that is required, to begin the quiz run '2519163_COM4402_Quiz.py'.
