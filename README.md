@@ -9,7 +9,7 @@ Instructions to run code:
 
 Please ensure the files '2519163_COM4402_Quiz.py' and 'data.csv' are in the same folder before running any programs. 
 
-The file 'function_test.py' should be ignored.
+Other files should be ignored and not ran.
 
 If you do not have the pandas library installed, before running go on to your preferred console and install it. 
 
