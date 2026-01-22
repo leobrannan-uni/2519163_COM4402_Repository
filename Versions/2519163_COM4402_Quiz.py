@@ -4,6 +4,7 @@ from time import sleep
 # The library 'pandas' in this case is used for collecting data for the quiz using an external csv file.
 import pandas as pd
 
+
 """ Function 'menu' is used to introduce the user to the quiz, 
     asking for a name and explaining the structure. """
 def menu():
@@ -15,12 +16,14 @@ def menu():
     sleep(3)
     data(name)
 
+
 """ Function 'data' gathers the data from the csv file so questions, 
     answers and correct answers can be taken from the dataframe and into the program.
     This is expressed in the standard variable choice 'df'. """
 def data(name):
     df = pd.read_csv("data.csv")
     quiz(name, df)
+
 
 """ Function 'quiz' creates the essential variables 'i' and 'score'. 'i' is the counter of which iteration 
     the user is on, used for other processes in different functions. 'score' is used to keep a tally
@@ -39,6 +42,7 @@ def quiz(name, df):
         sleep(1.5)
     print(f"\n\n{name} your final score is: {score}/5! Well done!")
 
+
 """ Function 'question' is simply used to print out the question and the multiple choice answers, 
     with the help of the '.iloc' function, which allows specific data to be accessed using indexes,
     which is essential for this program. Using the variable 'i', the correct question, 
@@ -49,6 +53,7 @@ def question(df, i):
     print(df.iloc[i]["Questions"])
     sleep(1)
     print("\n", df.iloc[i]["Answers"])
+
 
 """ Function 'choice_range' then gets the user to input their answer and verifies if it's in the 
     correct range or not. the function will try to convert the string into an integer, and 
@@ -70,6 +75,7 @@ def choice_range(df, i):
             sleep(1)
             question(df, i)
 
+
 """ Function 'is_correct' takes the users correct input and verifies if it's the correct answer. 
     If it's not an error message will appear, and move on to the next question. """
 def is_correct(choice, correct_answers, score):
@@ -80,6 +86,7 @@ def is_correct(choice, correct_answers, score):
     else:
         print(f"\nIncorrect! the correct answer is {correct_answers}")
         return score
+
 
 """ This is the first thing that the code runs, as it is the only code outside a function.
     Used as standard practice, this if statement enables the first function to be called, 
